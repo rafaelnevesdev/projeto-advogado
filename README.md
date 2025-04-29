@@ -14,7 +14,6 @@ Este é um projeto de site institucional para um advogado, desenvolvido com HTML
 │   └── /images/
 │       └── logo.png
 ├── /pages/
-│   ├── sobre.html
 │   ├── servicos.html
 │   ├── contato.html
 └── README.md

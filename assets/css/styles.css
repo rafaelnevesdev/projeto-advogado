@@ -449,3 +449,292 @@ footer {
         padding: 25px;
     }
 }
+
+/* Estilos gerais para seções */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    color: #1a1a4e;
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+.section-divider {
+    height: 3px;
+    width: 70px;
+    background-color: #1a1a4e;
+    margin: 0 auto;
+}
+
+/* Estilos específicos para a seção Sobre */
+.about {
+    background-color: #f9f9f9;
+    padding: 100px 0;
+}
+
+.about-intro {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Perfil do advogado */
+.about-profile {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+    position: relative;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(26, 26, 78, 0.9), transparent);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-social a {
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+}
+
+.profile-social a:hover {
+    background-color: #fff;
+    color: #1a1a4e;
+    transform: translateY(-3px);
+}
+
+.profile-content {
+    flex: 1;
+    padding: 40px;
+}
+
+.profile-content h3 {
+    color: #1a1a4e;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+.profile-title {
+    color: #666;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.profile-description {
+    margin-bottom: 30px;
+    line-height: 1.7;
+}
+
+.profile-section {
+    margin-bottom: 25px;
+}
+
+.profile-section h4 {
+    color: #1a1a4e;
+    font-size: 18px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.profile-section h4 i {
+    margin-right: 10px;
+    color: #1a1a4e;
+}
+
+.profile-section ul {
+    padding-left: 30px;
+}
+
+.profile-section ul li {
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.profile-section ul li:before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1a1a4e;
+}
+
+.specialization-tags {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.specialization-tags span {
+    background-color: rgba(26, 26, 78, 0.1);
+    color: #1a1a4e;
+    padding: 8px 15px;
+    border-radius: 30px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* História do escritório */
+.firm-history {
+    margin-bottom: 80px;
+}
+
+.history-header {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.history-header h3 {
+    color: #1a1a4e;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.history-content {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
+}
+
+.history-content p {
+    margin-bottom: 20px;
+}
+
+/* Valores */
+.values-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.values-header h3 {
+    color: #1a1a4e;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.value-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.value-icon {
+    width: 70px;
+    height: 70px;
+    background-color: rgba(26, 26, 78, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.value-icon i {
+    font-size: 30px;
+    color: #1a1a4e;
+}
+
+.value-card h4 {
+    color: #1a1a4e;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.value-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsividade para a seção Sobre */
+@media (max-width: 992px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .about-profile {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        flex: 0 0 auto;
+        height: 350px;
+    }
+    
+    .profile-content {
+        padding: 30px;
+    }
+    
+    .about {
+        padding: 70px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .profile-image {
+        height: 300px;
+    }
+    
+    .specialization-tags span {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
