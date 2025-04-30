@@ -780,3 +780,165 @@ footer {
     margin-bottom: 20px;
     line-height: 1.6;
 }
+
+/* Estilos para o currículo centralizado e interativo */
+.curriculum-container {
+    position: relative;
+    margin: 50px auto;
+    max-width: 1000px;
+}
+
+.profile-center {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image-wrapper:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.profile-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.profile-image-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+.image-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to top, rgba(26, 26, 78, 0.9), transparent);
+    padding: 30px 15px 15px;
+    color: #fff;
+    font-weight: 500;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.profile-image-wrapper:hover .image-overlay {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.curriculum-panel {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    overflow-y: auto;
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.curriculum-panel.active {
+    right: 0;
+}
+
+.panel-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background-color: rgba(26, 26, 78, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.panel-close:hover {
+    background-color: rgba(26, 26, 78, 0.2);
+}
+
+.panel-content {
+    padding: 40px 30px;
+}
+
+.panel-content h3 {
+    color: #1a1a4e;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.panel-content .profile-social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.panel-content .profile-social a {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(26, 26, 78, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a4e;
+    margin: 0 8px;
+    transition: all 0.3s ease;
+}
+
+.panel-content .profile-social a:hover {
+    background-color: #1a1a4e;
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+/* Overlay para quando o painel estiver aberto */
+.body-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.body-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Responsividade para o painel de currículo */
+@media (max-width: 576px) {
+    .curriculum-panel {
+        width: 100%;
+        right: -100%;
+    }
+    
+    .profile-image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+}

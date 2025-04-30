@@ -91,3 +91,50 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 });
+
+// Funcionalidade para o currículo interativo
+document.addEventListener('DOMContentLoaded', function() {
+    // Elementos do currículo
+    const profileImage = document.getElementById('profile-image');
+    const curriculumPanel = document.getElementById('curriculum-panel');
+    const panelClose = document.querySelector('.panel-close');
+    
+    // Criar overlay para o corpo
+    const bodyOverlay = document.createElement('div');
+    bodyOverlay.className = 'body-overlay';
+    document.body.appendChild(bodyOverlay);
+    
+    // Abrir o painel de currículo ao clicar na imagem
+    if (profileImage && curriculumPanel) {
+        profileImage.parentElement.addEventListener('click', function() {
+            curriculumPanel.classList.add('active');
+            bodyOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Impedir rolagem do body
+        });
+    }
+    
+    // Fechar o painel ao clicar no botão de fechar
+    if (panelClose) {
+        panelClose.addEventListener('click', function() {
+            curriculumPanel.classList.remove('active');
+            bodyOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restaurar rolagem do body
+        });
+    }
+    
+    // Fechar o painel ao clicar no overlay
+    bodyOverlay.addEventListener('click', function() {
+        curriculumPanel.classList.remove('active');
+        bodyOverlay.classList.remove('active');
+        document.body.style.overflow = ''; // Restaurar rolagem do body
+    });
+    
+    // Fechar o painel ao pressionar a tecla ESC
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && curriculumPanel.classList.contains('active')) {
+            curriculumPanel.classList.remove('active');
+            bodyOverlay.classList.remove('active');
+            document.body.style.overflow = ''; // Restaurar rolagem do body
+        }
+    });
+});
